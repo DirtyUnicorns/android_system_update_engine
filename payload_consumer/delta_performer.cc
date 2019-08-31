@@ -1686,6 +1686,7 @@ ErrorCode DeltaPerformer::ValidateManifest() {
     }
   }
 
+  /*
   if (manifest_.max_timestamp() < hardware_->GetBuildTimestamp()) {
     LOG(ERROR) << "The current OS build timestamp ("
                << hardware_->GetBuildTimestamp()
@@ -1693,6 +1694,7 @@ ErrorCode DeltaPerformer::ValidateManifest() {
                << manifest_.max_timestamp() << ")";
     return ErrorCode::kPayloadTimestampError;
   }
+ */
 
   if (major_payload_version_ == kChromeOSMajorPayloadVersion) {
     if (manifest_.has_dynamic_partition_metadata()) {
