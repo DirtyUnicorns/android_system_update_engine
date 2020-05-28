@@ -84,9 +84,9 @@ class SideloadDaemonState : public DaemonStateInterface,
                               status == UpdateStatus::VERIFYING || status == UpdateStatus::FINALIZING)) {
       // Split the progress bar in two parts for the two stages DOWNLOADING and
       // FINALIZING.
-      ReportStatus(base::StringPrintf("ui_print ======================="));
-      ReportStatus(base::StringPrintf("ui_print Flashing Dirty Unicorns"));
-      ReportStatus(base::StringPrintf("ui_print ======================="));
+      ReportStatus(base::StringPrintf("ui_print ===================================="));
+      ReportStatus(base::StringPrintf("ui_print Staging the files for Dirty Unicorns"));
+      ReportStatus(base::StringPrintf("ui_print ===================================="));
       ReportStatus(base::StringPrintf(
           "ui_print Step %d/3", status == UpdateStatus::DOWNLOADING ? 1 : 2));
       ReportStatus(base::StringPrintf("progress 0.3 0"));
@@ -95,10 +95,32 @@ class SideloadDaemonState : public DaemonStateInterface,
     if (status_ != status && (status == UpdateStatus::VERIFYING || status == UpdateStatus::FINALIZING)) {
       // Split the progress bar in two parts for the two stages DOWNLOADING and
       // FINALIZING.
+      ReportStatus(base::StringPrintf("ui_print "));
       ReportStatus(base::StringPrintf("ui_print ======================="));
-      ReportStatus(base::StringPrintf("ui_print Finalizing..."));
+      ReportStatus(base::StringPrintf("ui_print THANK YOU FOR FLASHING "));
       ReportStatus(base::StringPrintf("ui_print ======================="));
-       ReportStatus(base::StringPrintf(
+      ReportStatus(base::StringPrintf("ui_print "));
+      ReportStatus(base::StringPrintf("ui_print DDDDDDDDDDDDD        UUUUUUU     UUUUUUU "));
+      ReportStatus(base::StringPrintf("ui_print D::::::::::::DDD     U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D::::::::::::::DD    U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print DDD::::DDDD:::::D    U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print D:::::D    D:::::D   U:::::U     U:::::U "));
+      ReportStatus(base::StringPrintf("ui_print DDD::::DDDD:::::D    U:::::::UUU:::::::U "));
+      ReportStatus(base::StringPrintf("ui_print D::::::::::::::DD     UU:::::::::::::UU "));
+      ReportStatus(base::StringPrintf("ui_print D::::::::::::DDD        UU:::::::::UU "));
+      ReportStatus(base::StringPrintf("ui_print DDDDDDDDDDDDD             UUUUUUUUU "));
+      ReportStatus(base::StringPrintf("ui_print "));
+      ReportStatus(base::StringPrintf("ui_print ==========="));
+      ReportStatus(base::StringPrintf("ui_print ANDROID 10 "));
+      ReportStatus(base::StringPrintf("ui_print ==========="));
+      ReportStatus(base::StringPrintf(
            "ui_print Step %d/3", status == UpdateStatus::VERIFYING ? 2 : 3));
       ReportStatus(base::StringPrintf("progress 0.6 0"));
      }
